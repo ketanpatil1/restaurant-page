@@ -1,1 +1,3 @@
-console.log("Testing Webpack Dev Server");
+import generateHome from "./generateHome";
+
+console.log(generateHome());
