@@ -1,3 +1,10 @@
 export default function generateHome() {
-    return "Home";
+    const home = document.createElement("div");
+
+    const heading = document.createElement("h1");
+    heading.innerText = "Home";
+
+    home.appendChild(heading);
+
+    return home;
 }

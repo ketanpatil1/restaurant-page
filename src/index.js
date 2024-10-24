@@ -7,11 +7,20 @@ const menuBtn = document.querySelector(".menu-btn");
 const aboutBtn = document.querySelector(".about-btn");
 
 homeBtn.addEventListener("click", () => {
-    console.log(generateHome());
+    changeView(generateHome);
 });
 menuBtn.addEventListener("click", () => {
-    console.log(generateMenu());
+    changeView(generateMenu);
 });
 aboutBtn.addEventListener("click", () => {
-    console.log(generateAbout());
+    changeView(generateAbout);
 });
+
+const contentDiv = document.querySelector("#content");
+
+function changeView(viewFunc) {
+    while (contentDiv.hasChildNodes()) {
+        contentDiv.removeChild(contentDiv.firstChild);
+    }
+    contentDiv.appendChild(viewFunc());
+}
