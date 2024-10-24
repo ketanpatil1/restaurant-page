@@ -24,3 +24,5 @@ function changeView(viewFunc) {
     }
     contentDiv.appendChild(viewFunc());
 }
+
+changeView(generateHome);
